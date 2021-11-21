@@ -4,7 +4,6 @@ import sympy
 import time
 from cal_alg import *
 from one_dvis import *
-from PIL import Image
 
 st.set_page_config(page_title = 'Mathhelper', layout = 'wide')
 
@@ -56,7 +55,7 @@ if add_selectbox == 'Home Page':
     
 
     with intro:
-        st.image(Image.open("img/cover.png"), width = 1000)
+        st.image("https://raw.githubusercontent.com/DDKson/Project-python/main/mathhelper/img/cover.png", width = 1000)
         st.title("WELCOME TO MATHHELPER !!!")
         st.caption("MathHelper is created by group **PP8** to help you with basic to advanced operations in **Linear Algebra, Calculus and Optimization**. Here you will get step-by-step instructions on thousands of math problems, walking you through their solutions. We always aim to provide the best user experience. Thank you so much for trusting our service!")
 
@@ -96,20 +95,20 @@ if add_selectbox == 'Home Page':
         st.header(":green_heart:About us: ") 
         st.markdown("**Together, we are building an interesting application. No matter how hard Math is, whenever you study with MathHelper you will feel 'Math is fun'!**")
     with a:
-        st.image(Image.open("img/HA.png"))
+        st.image("https://raw.githubusercontent.com/DDKson/Project-python/main/mathhelper/img/HA.png")
         st.markdown("**Hồng Anh**")
     with b:
-        st.image(Image.open("img/Bách.png"))
+        st.image("https://raw.githubusercontent.com/DDKson/Project-python/main/mathhelper/img/B%C3%A1ch%20.png")
         st.markdown("**Xuân Bách**")
     with d:
-        st.image(Image.open("img/Duy.png"))
+        st.image("https://raw.githubusercontent.com/DDKson/Project-python/main/mathhelper/img/Duy.png")
         st.markdown("**Tuấn Duy**")
     with m:
-        st.image("img/Minh.png")
+        st.image("https://raw.githubusercontent.com/DDKson/Project-python/main/mathhelper/img/Minh.png")
         st.markdown("**Tuấn Minh**")
 
 if add_selectbox == 'Algebra':
-    st.image(Image.open("img/algebra.png"), width = 1000)
+    st.image("https://github.com/DDKson/Project-python/blob/main/mathhelper/img/algebra.png?raw=true", width = 1000)
     with bd:
         st.write(f"# Welcome to {add_selectbox} helper!")
         option_of_algebra = st.sidebar.radio("Choose method: ", ["Sum", "Subtract", "Multiply", "Scalar Multiply", "Gauss Eliminate", "Calculate determinant", "Find inverse", "Find transpose"])
@@ -404,7 +403,7 @@ if add_selectbox == 'Algebra':
                 
 
 if add_selectbox == 'Calculus':
-    st.image(Image.open("img/Calculus.png"), width = 1000)
+    st.image("https://github.com/DDKson/Project-python/blob/main/mathhelper/img/Calculus.png?raw=true", width = 1000)
     with bd:
         st.write(f"# Welcome to {add_selectbox} helper!")
         option_of_calculus = st.sidebar.radio("Choose method: ", ["Derivate", "Higher derivative",  "Integrate"])        
@@ -491,7 +490,7 @@ st.set_option('deprecation.showPyplotGlobalUse', False)
 
 
 if add_selectbox == 'Optimization':
-    st.image(Image.open("img/Opti.png"), width = 1000)    
+    st.image("https://github.com/DDKson/Project-python/blob/main/mathhelper/img/Opti.png?raw=true", width = 1000)    
     methods = ["Goldensection", "Bisection", "Newton Raphson", "Secant"]
     main1 = st.sidebar.radio("choose desired method:", methods)
     tutorial_how_to_input_in_calculus()
@@ -567,6 +566,7 @@ if add_selectbox == 'Optimization':
 if add_selectbox == 'Pomodoro':
     
     with bd:
+        st.image("https://github.com/DDKson/Project-python/blob/main/mathhelper/img/pomodoro.png?raw=true")
         st.write(f"# Welcome to {add_selectbox} timer!")
         st.write("**The Pomodoro Technique** is a time management method developed by Francesco Cirillo in the late 1980s. It uses a timer to **break work into intervals**, traditionally **25 minutes** in length, separated by short breaks. Each interval is known as a pomodoro, from the Italian word for 'tomato', after the tomato-shaped kitchen timer Cirillo used as a university student.")
         st.write("The Pomodoro technique has ** five steps: **")
