@@ -469,7 +469,7 @@ if add_selectbox == 'Calculus':
             
             functionf = st.sidebar.text_input("Enter the function")
             value_a = st.sidebar.text_input("Enter lower limit a")
-            value_b = st.sidebar.text_input("Enter lower limit b")
+            value_b = st.sidebar.text_input("Enter upper limit b")
             if functionf and value_a and value_b:
                 value_a = float(value_a)
                 value_b = float(value_b)
@@ -490,7 +490,6 @@ st.set_option('deprecation.showPyplotGlobalUse', False)
 
 
 if add_selectbox == 'Optimization':
-    st.image("https://github.com/DDKson/Project-python/blob/main/mathhelper/img/Opti.png?raw=true", width = 1000)    
     methods = ["Goldensection", "Bisection", "Newton Raphson", "Secant"]
     main1 = st.sidebar.radio("choose desired method:", methods)
     tutorial_how_to_input_in_calculus()
@@ -503,6 +502,7 @@ if add_selectbox == 'Optimization':
             zoom = st.sidebar.slider("zoom (0: narrower, 10: wider)".title(), 0., 10., step = 0.1)
         if main1 == methods[0]:
             with bd:
+                st.image("https://github.com/DDKson/Project-python/blob/main/mathhelper/img/Opti.png?raw=true", width = 1000)    
                 st.title(f"chosen method: {main1}".upper())
                 st.header(":dart: Summary of the Golden Section Algorithm")
                 st.markdown("* Starting from $[a_0, b_0]$.")
@@ -530,6 +530,7 @@ if add_selectbox == 'Optimization':
             acc = st.sidebar.text_input("enter accuracy:".title())
             zoom = st.sidebar.slider("zoom (0: narrower, 10: wider)".title(), 0., 10., step = 0.1)
         with bd:
+           st.image("https://github.com/DDKson/Project-python/blob/main/mathhelper/img/Opti.png?raw=true", width = 1000)    
            st.header(":dart: Newton - Raphson Algorithm")
            st.markdown("* Starting from some initial approximation $x^{(0)}$ of $x^*$, if the current approximation is $x^{(k)}$, the next approximation is given by")
            st.latex(r''' x^{(k+1)} = x^{(k)} - \frac{f' \lparen x^{(k)} \rparen} {f'' \lparen x^{(k)} \rparen}\qquad \lparen 5 \rparen''')
@@ -541,6 +542,7 @@ if add_selectbox == 'Optimization':
            st.markdown("where $\epsilon$ is some small number.")
         if f and x0 and acc:
             with bd:
+                st.image("https://github.com/DDKson/Project-python/blob/main/mathhelper/img/Opti.png?raw=true", width = 1000)    
                 st.title(f"chosen method: {main1}".upper())
                 newton_raphson(f, x0, acc, zoom)
     if main1 == methods[3]:
