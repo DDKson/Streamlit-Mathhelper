@@ -55,7 +55,7 @@ if add_selectbox == 'Home Page':
     
 
     with intro:
-        st.image("https://raw.githubusercontent.com/DDKson/Project-python/main/mathhelper/img/cover.png", width = 1000)
+        st.image("https://raw.githubusercontent.com/DDKson/Project-python/main/mathhelper/img/%E1%BA%A2nh%20b%C3%ACa%20(1).png", width = 1000)
         st.title("WELCOME TO MATHHELPER !!!")
         st.caption("MathHelper is created by group **PP8** to help you with basic to advanced operations in **Linear Algebra, Calculus and Optimization**. Here you will get step-by-step instructions on thousands of math problems, walking you through their solutions. We always aim to provide the best user experience. Thank you so much for trusting our service!")
 
@@ -536,7 +536,7 @@ if add_selectbox == 'Optimization':
            st.latex(r''' x^{(k+1)} = x^{(k)} - \frac{f' \lparen x^{(k)} \rparen} {f'' \lparen x^{(k)} \rparen}\qquad \lparen 5 \rparen''')
            st.markdown("* The algorithm is terminated if some preset degree of precision is achieved.") 
            st.markdown("For example, ") 
-           st.latex(r''' \lvert f' \lparen x^{(k)} \rvert \lt \epsilon ''')
+           st.latex(r''' \lvert f' \lparen x^{(k)} \rparen \rvert \lt \epsilon ''')
            st.markdown("or")
            st.latex(r''' \lvert x^{(k + 1)} - x^{(k)} \rvert \lt \epsilon''')    
            st.markdown("where $\epsilon$ is some small number.")
