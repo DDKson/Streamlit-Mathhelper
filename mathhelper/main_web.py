@@ -55,7 +55,7 @@ if add_selectbox == 'Home Page':
     
 
     with intro:
-        st.image("https://stneuedu.sharepoint.com/sites/GROUP8-PYTHONPROJECT-DSEB62/Shared%20Documents/General/Project%20Photos/%E1%BA%A2nh%20b%C3%ACa.png", width = 1000)
+        st.image("https://github.com/DDKson/Streamlit-Mathhelper/blob/main/mathhelper/img/%E1%BA%A2nh%20b%C3%ACa%20(1).png?raw=true", width = 1000)
         st.title("WELCOME TO MATHHELPER !!!")
         st.caption("MathHelper is created by group **PP8** to help you with basic to advanced operations in **Linear Algebra, Calculus and Optimization**. Here you will get step-by-step instructions on thousands of math problems, walking you through their solutions. We always aim to provide the best user experience. Thank you so much for trusting our service!")
 
@@ -98,17 +98,17 @@ if add_selectbox == 'Home Page':
         st.image("https://github.com/DDKson/Streamlit-Mathhelper/blob/main/mathhelper/img/HA.png?raw=true")
         st.markdown("**Hồng Anh**")
     with b:
-        st.image("https://stneuedu.sharepoint.com/sites/GROUP8-PYTHONPROJECT-DSEB62/Shared%20Documents/General/Project%20Photos/Ba%CC%81ch%20.png")
+        st.image("https://github.com/DDKson/Streamlit-Mathhelper/blob/main/mathhelper/img/B%C3%A1ch%20.png?raw=true")
         st.markdown("**Xuân Bách**")
     with d:
-        st.image("https://stneuedu.sharepoint.com/sites/GROUP8-PYTHONPROJECT-DSEB62/Shared%20Documents/General/Project%20Photos/Duy.png")
+        st.image("https://github.com/DDKson/Streamlit-Mathhelper/blob/main/mathhelper/img/Duy.png?raw=true")
         st.markdown("**Tuấn Duy**")
     with m:
-        st.image("https://stneuedu.sharepoint.com/sites/GROUP8-PYTHONPROJECT-DSEB62/Shared%20Documents/General/Project%20Photos/Minh.png")
+        st.image("https://github.com/DDKson/Streamlit-Mathhelper/blob/main/mathhelper/img/Minh.png?raw=true")
         st.markdown("**Tuấn Minh**")
 
 if add_selectbox == 'Algebra':
-    st.image("https://stneuedu.sharepoint.com/sites/GROUP8-PYTHONPROJECT-DSEB62/Shared%20Documents/General/Project%20Photos/algebra.png", width = 1000)
+    st.image("https://github.com/DDKson/Streamlit-Mathhelper/blob/main/mathhelper/img/algebra.png?raw=true", width = 1000)
     with bd:
         st.write(f"# Welcome to {add_selectbox} helper!")
         option_of_algebra = st.sidebar.radio("Choose method: ", ["Sum", "Subtract", "Multiply", "Scalar Multiply", "Gauss Eliminate", "Calculate determinant", "Find inverse", "Find transpose"])
@@ -403,7 +403,7 @@ if add_selectbox == 'Algebra':
                 
 
 if add_selectbox == 'Calculus':
-    st.image("https://stneuedu.sharepoint.com/sites/GROUP8-PYTHONPROJECT-DSEB62/Shared%20Documents/General/Project%20Photos/Calculus.png", width = 1000)
+    st.image("https://github.com/DDKson/Streamlit-Mathhelper/blob/main/mathhelper/img/Calculus.png?raw=true", width = 1000)
     with bd:
         st.write(f"# Welcome to {add_selectbox} helper!")
         option_of_calculus = st.sidebar.radio("Choose method: ", ["Derivate", "Higher derivative",  "Integrate"])        
@@ -490,7 +490,7 @@ st.set_option('deprecation.showPyplotGlobalUse', False)
 
 
 if add_selectbox == 'Optimization':
-    st.image("https://stneuedu.sharepoint.com/sites/GROUP8-PYTHONPROJECT-DSEB62/Shared%20Documents/General/Project%20Photos/Opti.png", width = 1000)    
+    st.image("https://github.com/DDKson/Streamlit-Mathhelper/blob/main/mathhelper/img/Opti.png?raw=true", width = 1000)    
     methods = ["Goldensection", "Bisection", "Newton Raphson", "Secant"]
     main1 = st.sidebar.radio("choose desired method:", methods)
     tutorial_how_to_input_in_calculus()
