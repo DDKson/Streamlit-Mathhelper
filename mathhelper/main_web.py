@@ -95,7 +95,7 @@ if add_selectbox == 'Home Page':
         st.header(":green_heart:About us: ") 
         st.markdown("**Together, we are building an interesting application. No matter how hard Math is, whenever you study with MathHelper you will feel 'Math is fun'!**")
     with a:
-        st.image("https://stneuedu.sharepoint.com/sites/GROUP8-PYTHONPROJECT-DSEB62/Shared%20Documents/General/Project%20Photos/HA.png")
+        st.image("https://github.com/DDKson/Streamlit-Mathhelper/blob/main/mathhelper/img/HA.png")
         st.markdown("**Hồng Anh**")
     with b:
         st.image("https://stneuedu.sharepoint.com/sites/GROUP8-PYTHONPROJECT-DSEB62/Shared%20Documents/General/Project%20Photos/Ba%CC%81ch%20.png")
