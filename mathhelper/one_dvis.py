@@ -39,7 +39,7 @@ def goldensection(a, b, f, acc, zoom):
     f_val = eval(f)
     p = (3-mt.sqrt(5))/2
     dic = {}
-    res = pd.DataFrame(columns = ["a", "b", "m", "n", "f(m)", "f(n)"])
+    res = []
     while b-a > acc:
         i += 1
         m = a + p*(b-a)
@@ -60,9 +60,9 @@ def goldensection(a, b, f, acc, zoom):
                  f(m) = {func(f,m)} \n
                  f(n) = {func(f,n)}  \n""")
         dic = {"a": a, "b": b, "m": m, "n" : n, "f(m)": func(f, m), "f(n)": func(f, n)}
-        res = res.append(dic, ignore_index = True)
+        res.append(dic)
     st.title("result summary".upper())
-    st.dataframe(res)
+    st.dataframe(pd.DataFrame(res))
     return [a,b]
 
 
@@ -94,7 +94,7 @@ def bisection(f, a, b, acc, zoom):
     x = np.linspace(a-zoom, b + zoom, 100)
     f_val = eval(f)
     i = 0
-    res = pd.DataFrame(columns =["a", "b", "c", "f'(a).f'(c)"])
+    res = []
     while b-a > acc:
         a1 = a
         b1 = b
@@ -121,9 +121,9 @@ def bisection(f, a, b, acc, zoom):
             st.write("the algorithm does not converges to local minimizer")
             break
         dic = {"a": a, "b": b, "c": c, "f'(a).f'(c)" : fpa*fpc, "f'(c)" : fpc}
-        res = res.append(dic, ignore_index = True)
+        res.append(dic)
     st.title("result summary".upper())
-    st.dataframe(res)
+    st.dataframe(pd.DataFrame(res))
     return [a,b]
 
 
@@ -147,7 +147,7 @@ def newton_raphson(f, x0, acc, zoom):
     f_val = eval(f)
     i = 0
     dic = {}
-    res = pd.DataFrame(columns =["x(k)", "f'(x(k))"])
+    res = []
     while abs(func(fix_f(fp), x0)) > acc:     
         i += 1
         x0 = x0 - (func(fix_f(fp), x0)/ func(fix_f(fp2), x0))
@@ -160,9 +160,9 @@ def newton_raphson(f, x0, acc, zoom):
                  \n f'(x(k)) = {func(fix_f(fp), x0)}
                  """)
         dic = { "x(k)": x0, "f'(x(k))": func(fix_f(fp), x0)}
-        res = res.append(dic, ignore_index = True)
+        res.append(dic)
     st.title("result summary".upper())
-    st.dataframe(res)
+    st.dataframe(pd.DataFrame(res))
     return x0
 
 
@@ -186,7 +186,7 @@ def secant(f, x0, x1, acc, zoom):
     x = np.linspace(x0 - zoom, x0 + zoom, 100)
     f_val = eval(f)
     i = 0
-    res = pd.DataFrame(columns =["x(k)", "f'(x(k))"])
+    res = []
     dic = {}
     while abs(func(fp, x0)) > acc:
         i += 1
@@ -205,9 +205,9 @@ def secant(f, x0, x1, acc, zoom):
                  \n x(k) = {x1}
                  \n f'(x(k)) = {func(fp, x1)}""")
         dic = {"x(k)": x1, "f'(x(k))": func(fp, x1)}
-        res = res.append(dic, ignore_index = True)
+        res.append(dic)
     st.title("result summary".upper())
-    st.dataframe(res)
+    st.dataframe(pd.DataFrame(res))
     return x1
 
 
